@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Sua-84-URc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Sua-84-URc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Blackjack View Controller-->
@@ -30,6 +30,9 @@
                                 <state key="normal" title="Deal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="dealButtonTapped:" destination="Sua-84-URc" eventType="touchUpInside" id="ffY-mn-Uub"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXk-KS-sws" userLabel="horizontalBar">
                                 <rect key="frame" x="20" y="97" width="374" height="4"/>
@@ -74,14 +77,6 @@
                                 <rect key="frame" x="177" y="208" width="60" height="80"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="houseCard3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl4-1V-860" userLabel="houseCard4">
-                                <rect key="frame" x="255" y="208" width="60" height="80"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" label="houseCard4"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -153,6 +148,9 @@
                                 <state key="normal" title="Hit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="hitButtonTapped:" destination="Sua-84-URc" eventType="touchUpInside" id="m4d-Ob-bVr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzP-D7-yWZ" userLabel="stay">
                                 <rect key="frame" x="334" y="420" width="60" height="60"/>
@@ -162,6 +160,9 @@
                                 <state key="normal" title="Stay">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="stayButtonTapped:" destination="Sua-84-URc" eventType="touchUpInside" id="dVq-4B-ls7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yv3-zq-Crv" userLabel="playerCard1">
                                 <rect key="frame" x="20" y="493" width="60" height="80"/>
@@ -229,10 +230,48 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fl4-1V-860" userLabel="houseCard4">
+                                <rect key="frame" x="255" y="208" width="60" height="80"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="houseCard4"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="dealButton" destination="ah4-9X-lXP" id="COd-hz-6zJ"/>
+                        <outlet property="houseBlackjack" destination="o2I-uD-oQl" id="lfd-8v-ciM"/>
+                        <outlet property="houseBusted" destination="pW6-R2-I3W" id="EAT-Nu-0Pw"/>
+                        <outlet property="houseCard1" destination="MB7-5b-QZM" id="DtM-ax-w8s"/>
+                        <outlet property="houseCard2" destination="urs-V1-hLW" id="YTv-2N-ggj"/>
+                        <outlet property="houseCard3" destination="nXQ-iJ-OuQ" id="ioh-yk-i6v"/>
+                        <outlet property="houseCard4" destination="fl4-1V-860" id="mCA-Wd-VWX"/>
+                        <outlet property="houseCard5" destination="Ye3-Hg-JNH" id="KyK-xi-mUy"/>
+                        <outlet property="houseLosses" destination="LgO-bp-yhQ" id="FL3-tS-exL"/>
+                        <outlet property="houseMainLabel" destination="6mf-pB-D2z" id="tmK-j9-HMh"/>
+                        <outlet property="houseScore" destination="IIA-Ew-rRc" id="LEv-wY-Ads"/>
+                        <outlet property="houseStayed" destination="bK6-Tk-d0e" id="eD4-8C-J9F"/>
+                        <outlet property="houseWins" destination="dJL-rq-1Zt" id="3iM-sE-w26"/>
+                        <outlet property="playerBlackjack" destination="WgU-EH-8FL" id="QkQ-Go-Ax2"/>
+                        <outlet property="playerBusted" destination="R89-KL-eMU" id="zqp-af-2rV"/>
+                        <outlet property="playerCard1" destination="Yv3-zq-Crv" id="eeP-hv-slj"/>
+                        <outlet property="playerCard2" destination="E5c-72-u9U" id="gRg-ZX-RFx"/>
+                        <outlet property="playerCard3" destination="kcx-GU-KeG" id="gNy-kj-Vyd"/>
+                        <outlet property="playerCard4" destination="utf-7Z-CIB" id="blE-td-dnN"/>
+                        <outlet property="playerCard5" destination="gCE-db-huL" id="7a7-BV-xf7"/>
+                        <outlet property="playerMainLabel" destination="yum-bz-Qhp" id="OOK-v3-0d8"/>
+                        <outlet property="playerScore" destination="2LA-xK-NBK" id="2ux-wF-ymL"/>
+                        <outlet property="playerStayed" destination="TmX-OF-3CS" id="vau-VD-bXx"/>
+                        <outlet property="playerWins" destination="xqU-dA-iHc" id="YFG-Rm-6Eo"/>
+                        <outlet property="playerlosses" destination="BMg-Vn-GRn" id="sg3-ip-dFw"/>
+                        <outlet property="playersHitButton" destination="Ra6-Lx-heH" id="0h9-EP-Ucn"/>
+                        <outlet property="playersStayButton" destination="dzP-D7-yWZ" id="MIP-lX-hkg"/>
+                        <outlet property="winnerLabel" destination="AFS-sU-bay" id="ugU-dA-dg6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VwO-ay-0xR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
